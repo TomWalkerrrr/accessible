@@ -24,37 +24,39 @@
     <div class="navbar z-[9999] fixed top-0 left-0 w-[100vw]">
         <header>
             <nav id="desktopNav" class="w-full bg-[#EDF2F7] pb-5 pt-3">
-                <div class="logo ml-2 flex items-center">
+                <div class="logo ml-2 flex items-center max-md:justify-center">
                     <img class="w-12 h-auto" src="./assets/images/accesibleLogo.webp"
                         alt="Illustration de quatre personnes en situation de handicap dans un cadre extérieur joyeux : une personne en fauteuil roulant manuel, une personne malvoyante guidée par une accompagnatrice, et un enfant en fauteuil roulant électrique. Le mot 'Accessible' est affiché en haut de l’image.">
                     <h1 class="font-montserrat uppercase ml-2 text-3xl font-bold text-[#2866d5]">
                         Accessible
                     </h1>
-                    <div class="flex flex-items-center ml-24 justify-center py-5">
+                    <div class="flex flex-wrap items-center ml-5 justify-center py-5">
 
                         <!-- Bouton burger -->
-                        <button id="menuBtn" class="md:hidden text-[#2866d5] text-3xl focus:outline-none"
+                        <button id="menuBtn" class="md:hidden text-[#2866D5] cursor-pointer text-3xl focus:outline-none"
                             aria-label="Ouvrir le menu">
-                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars" id="clickIcon"></i>
                         </button>
 
-                        <!-- Ul des desktop -->
-
-                        <ul
-                            class="hidden md:flex flex-wrap gap-10 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg">
-                            <li><a href="index.php"
-                                    class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a>
-                            </li>
-                            <li><a href="lieux.php">Lieux</a></li>
-                            <li><a href="about.php">Qui sommes-nous ?</a></li>
-                        </ul>
                     </div>
 
-                    <!-- Ul des mobile -->
+                    <!-- Ul des desktop -->
 
+                    <ul
+                        class="hidden md:flex flex-wrap gap-10 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg">
+                        <li><a href="index.php"
+                                class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a>
+                        </li>
+                        <li><a href="lieux.php">Lieux</a></li>
+                        <li><a href="about.php">Qui sommes-nous ?</a></li>
+                    </ul>
                 </div>
+
+                <!-- Ul des mobile -->
+
+
                 <ul id="mobileMenu"
-                    class="hidden flex-col gap-6 mt-4 px-6 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg md:hidden">
+                    class="hidden flex ml-24 flex-col gap-6 mt-4 px-6 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg md:hidden">
                     <li><a href="index.php"
                             class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a></li>
                     <li><a href="lieux.php">Lieux</a></li>
@@ -63,35 +65,36 @@
             </nav>
         </header>
     </div>
+    </div>
 
 
     <main>
 
-        <div class="w-[100vw] h-[70vh] mt-24 z-[1000] imagesContainer bg-cover bg-center">
+        <div class="w-[100vw] h-[70vh] mt-12 z-[1000] imagesContainer bg-cover bg-center">
 
             <div class="text flex flex-col justify-center">
                 <h1
-                    class="text-3xl mt-24 mainTitle drop-shadow-lg text-[#FAFAFA] self-center underline-offset-8 leading-23 font-bold tracking-widest uppercase font-montserrat text-center">
+                    class="text-3xl mt-24 max-sm:text-lg max-sm:leading-15 mainTitle drop-shadow-lg text-[#FAFAFA] self-center underline-offset-8 leading-23 font-bold tracking-widest uppercase font-montserrat text-center">
                     <i class="fa-solid fa-quote-left text-[#155dfc]"></i> Tous unis pour
                     construire
                     <br><span
-                        class="text-5xl decoration-wavy otherTitle font-bold underline decoration-3 decoration-[#FFFFFF] text-[#155dfc]">l’accessibilité</span>
+                        class="text-5xl decoration-wavy otherTitle font-bold underline decoration-3 decoration-[#FFFFFF] text-[#155dfc] max-sm:text-2xl">l’accessibilité</span>
                     <br> de
                     demain ! <i class="fa-solid fa-quote-left text-[#155dfc]"></i>
                 </h1>
 
                 <button type="button" aria-label="Accéder au répertoire des lieux accessibles"
-                    class="rounded w-[28rem] text-xl self-center mt-5 cursor-pointer buttonEnter bg-blue-600 p-4 pt-5 pb-5 pl-6 pr-6 text-[#ffff] uppercase font-medium font-montserrat">
-                    <i class="fas fa-map-marker-alt px-4"></i> Accéder
+                    class="rounded w-[28rem] max-sm:w-[15rem] max-sm:text-lg text-xl self-center mt-5 cursor-pointer buttonEnter bg-blue-600 p-4 pt-5 pb-5 pl-6 pr-6 max-sm:p-2 max-sm:pt-2 max-sm:pl-2 max-sm:pr-2 text-[#ffff] uppercase font-medium font-montserrat">
+                    <i class="fas fa-map-marker-alt max-sm:hidden px-4 max-sm:px-2"></i> Accéder
                     au
-                    répertoire <i class="fas fa-map-marker-alt px-4"></i></button>
+                    répertoire <i class="fas fa-map-marker-alt max-sm:hidden px-4 max-sm:px-2"></i></button>
             </div>
 
         </div>
 
         <div class="accessibleText flex justify-center mt-12">
             <h2
-                class="text-4xl font-montserrat flex text-shadow text-shadow-lg mx-auto self-center text-[#2866d5] font-bold uppercase">
+                class="text-4xl  font-montserrat flex text-shadow text-shadow-lg mx-auto self-center text-[#2866d5] font-bold uppercase">
                 Accessible</h2>
         </div>
 
@@ -288,9 +291,12 @@
 
         const menuBtn = document.getElementById("menuBtn");
         const mobileMenu = document.getElementById("mobileMenu");
+        const clickIcon = document.getElementById("clickIcon");
 
         menuBtn.addEventListener("click", function (e) {
-            mobileMenu.classList.toggle("hidden")
+            mobileMenu.classList.toggle("hidden");
+            // mobileMenu.classList.toggle("active");
+            clickIcon.classList.toggle("transformIcon");
         })
 
 
