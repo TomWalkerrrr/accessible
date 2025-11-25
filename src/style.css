@@ -1,0 +1,38 @@
+/* Hover enter button */
+
+.buttonEnter {
+  transition: 0.4s ease-in-out;
+}
+
+.buttonEnter:hover {
+  background: rgb(0, 132, 255);
+  transform: scale(1.04);
+}
+
+/* Titre principal */
+
+.mainTitle {
+  text-shadow: 0px 0px 30px #282828 !important;
+}
+
+.otherTitle {
+  text-shadow: 4px 4px 20px rgb(255, 255, 255) !important;
+}
+
+.signaleBtn {
+  transition: 0.4s ease-in-out;
+}
+
+.signaleBtn:hover {
+  transform: scale(1.03);
+  background: rgb(144, 22, 22);
+}
+
+.signaleSucces {
+  transition: 0.4s ease-in-out;
+}
+
+.signaleSucces:hover {
+  transform: scale(1.03);
+  background: rgb(30, 95, 46);
+}

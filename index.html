@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Accessible est une plateforme collaborative qui permet aux personnes en situation de handicap d’évaluer l’accessibilité des lieux physiques et des sites internet, et de signaler les obstacles rencontrés afin de construire une société plus inclusive.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./src/output.css" rel="stylesheet">
+
+    <link href="./src/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="shortcut icon" href="./assets/images/accesibleLogo.webp" type="image/x-icon">
+
+    <title>Accessible</title>
+</head>
+
+<body class="bg-[#F6F6F6] p-0 m-0">
+
+    <div class="navbar z-[9999] fixed top-0 left-0 w-[100vw]">
+        <header>
+            <nav id="desktopNav" class="w-full bg-[#EDF2F7] pb-5 pt-3">
+                <div class="logo ml-2 flex items-center">
+                    <img class="w-12 h-auto" src="./assets/images/accesibleLogo.webp"
+                        alt="Illustration de quatre personnes en situation de handicap dans un cadre extérieur joyeux : une personne en fauteuil roulant manuel, une personne malvoyante guidée par une accompagnatrice, et un enfant en fauteuil roulant électrique. Le mot 'Accessible' est affiché en haut de l’image.">
+                    <h1 class="font-montserrat uppercase ml-2 text-3xl font-bold text-[#2866d5]">
+                        Accessible
+                    </h1>
+                    <div class="flex flex-items-center ml-24 justify-center py-5">
+
+                        <!-- Bouton burger -->
+                        <button id="menuBtn" class="md:hidden text-[#2866d5] text-3xl focus:outline-none"
+                            aria-label="Ouvrir le menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Ul des desktop -->
+
+                        <ul
+                            class="hidden md:flex flex-wrap gap-10 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg">
+                            <li><a href="index.php"
+                                    class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a>
+                            </li>
+                            <li><a href="lieux.php">Lieux</a></li>
+                            <li><a href="about.php">Qui sommes-nous ?</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Ul des mobile -->
+
+                </div>
+                <ul id="mobileMenu"
+                    class="hidden flex-col gap-6 mt-4 px-6 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg md:hidden">
+                    <li><a href="index.php"
+                            class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a></li>
+                    <li><a href="lieux.php">Lieux</a></li>
+                    <li><a href="about.php">Qui sommes-nous ?</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+    <main>
+
+        <div class="w-[100vw] h-[70vh] mt-24 z-[1000] imagesContainer bg-cover bg-center">
+
+            <div class="text flex flex-col justify-center">
+                <h1
+                    class="text-3xl mt-24 mainTitle drop-shadow-lg text-[#FAFAFA] self-center underline-offset-8 leading-23 font-bold tracking-widest uppercase font-montserrat text-center">
+                    <i class="fa-solid fa-quote-left text-[#155dfc]"></i> Tous unis pour
+                    construire
+                    <br><span
+                        class="text-5xl decoration-wavy otherTitle font-bold underline decoration-3 decoration-[#FFFFFF] text-[#155dfc]">l’accessibilité</span>
+                    <br> de
+                    demain ! <i class="fa-solid fa-quote-left text-[#155dfc]"></i>
+                </h1>
+
+                <button type="button" aria-label="Accéder au répertoire des lieux accessibles"
+                    class="rounded w-[28rem] text-xl self-center mt-5 cursor-pointer buttonEnter bg-blue-600 p-4 pt-5 pb-5 pl-6 pr-6 text-[#ffff] uppercase font-medium font-montserrat">
+                    <i class="fas fa-map-marker-alt px-4"></i> Accéder
+                    au
+                    répertoire <i class="fas fa-map-marker-alt px-4"></i></button>
+            </div>
+
+        </div>
+
+        <div class="accessibleText flex justify-center mt-12">
+            <h2
+                class="text-4xl font-montserrat flex text-shadow text-shadow-lg mx-auto self-center text-[#2866d5] font-bold uppercase">
+                Accessible</h2>
+        </div>
+
+
+        <div class="accessiblePart flex flex-wrap w-full mx-auto">
+
+
+            <!-- Notre objectifs -->
+
+            <div
+                class="paragraphe w-110 bg-white flex flex-col mx-auto mt-12 p-12 rounded-xl shadow-indigo-300 shadow-2xl">
+                <h3 class="mb-5 tracking-widest text-[#2866d5] text-xl uppercase font-montserrat font-bold text-center">
+                    <i class="fa-solid fa-bullseye text-[#F0B100]"></i> Notre objectifs <i
+                        class="fa-solid fa-bullseye text-[#F0B100]"></i>
+                </h3>
+                <p class="text-lg text-center font-montserrat">Ce site a pour vocation de faciliter la vie des
+                    personnes en situation de handicap, en leur permettant d’identifier et de partager des lieux et des
+                    sites web accessibles, quels que soient leurs besoins spécifiques ou les conditions d’accueil
+                    proposées.</p>
+            </div>
+
+            <!-- Notre objectifs -->
+
+
+
+            <!-- Nos Services -->
+
+            <div
+                class="paragraphe w-110 bg-white flex flex-col mx-auto mt-12 p-12 rounded-xl shadow-indigo-300 shadow-2xl">
+                <h3 class="mb-5 tracking-widest text-[#2866d5] text-xl uppercase font-montserrat font-bold text-center">
+                    <i class="fa-solid fa-phone text-[#F0B100]"></i> Nos Services <i
+                        class="fa-solid fa-phone text-[#F0B100]"></i>
+                </h3>
+                <p class="text-lg text-center font-montserrat">Ce site vous permet de répertorier les lieux non
+                    accessibles, qu’il s’agisse de sites internet ou de lieux physiques, par exemple en cas d’absence de
+                    rampe d’accès..</p>
+                <br>
+                <button type="button" aria-label="Accéder au répertoire des lieux accessibles"
+                    class="rounded w-[100%] text-xl self-center mt-3 cursor-pointer buttonEnter bg-blue-600 p-4 text-[#ffff] uppercase font-medium font-montserrat">
+                    Accéder
+                    au
+                    répertoire</button>
+            </div>
+
+            <!-- Nos Services -->
+
+
+            <div
+                class="paragraphe w-110 bg-white flex flex-col mx-auto mt-12 p-12 rounded-xl shadow-indigo-300 shadow-2xl">
+                <h3 class="mb-5 tracking-widest text-[#2866d5] text-xl uppercase font-montserrat font-bold text-center">
+                    <i class="fa-solid fa-icons text-[#F0B100]"></i> Types de Handicap <i
+                        class="fa-solid fa-icons text-[#F0B100]"></i>
+                </h3>
+                <p class="text-lg text-center font-montserrat">Catégories de handicap présentes sur le site.</p>
+                <br>
+                <div style="padding: 5px;"
+                    class="physique uppercase flex w-64 justify-center mx-auto rounded-xl bg-blue-600 text-[#fafafa] text-center font-montserrat">
+
+                    <p><i class="fa-brands fa-accessible-icon pt-2 px-4"></i>physique<i
+                            class="fa-brands fa-accessible-icon pt-2 px-4"></i></p>
+                </div>
+                <div style="padding: 5px; margin-top: 10px;"
+                    class="physique uppercase flex w-64 justify-center mx-auto rounded-xl bg-[#282828] text-[#fafafa] text-center font-montserrat">
+
+                    <p><i class="fa-solid fa-eye pt-2 px-4"></i>visuel<i class="fa-solid fa-eye pt-2 px-4"></i></p>
+                </div>
+                <div style="padding: 5px; margin-top: 10px;"
+                    class="physique uppercase flex w-64 justify-center mx-auto rounded-xl bg-[#1B5E20] text-[#fafafa] text-center font-montserrat">
+
+                    <p><i class="fa-solid fa-brain pt-2 px-4"></i>psychique<i class="fa-solid fa-brain pt-2 px-4"></i>
+                    </p>
+                </div>
+                <div style="padding: 5px; margin-top: 10px;"
+                    class="physique uppercase flex w-64 justify-center mx-auto rounded-xl bg-[#BF360C] text-[#fafafa] text-center font-montserrat">
+
+                    <p><i class="fa-solid fa-audio-description pt-2 px-4"></i>Auditif<i
+                            class="fa-solid fa-audio-description pt-2 px-4"></i>
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="solutionPart flex flex-col w-[100vw] mt-24 flex mx-auto">
+
+            <h2
+                class="text-4xl font-montserrat flex text-shadow text-shadow-lg mx-auto text-[#2866d5] font-bold uppercase">
+                Nos solutions</h2>
+            <p class="text-2xl p-3 mt-5 text-center font-montserrat font-medium">Aider, c’est aussi avertir les autres.
+                <br>
+                Informez le plus grand nombre en quelques clics !
+            </p>
+
+        </div>
+
+        <div class="flex flex-wrap">
+
+            <div class="carteReport flex justify-center flex-col flex-wrap w-[100vw] mt-12">
+                <div
+                    class="card w-[80%] p-6 mb-5 pt-6 flex flex-col shadow bg-sky-400 shadow shadow-2xl rounded-xl mx-auto bg-white text-center">
+                    <h3 class="text-2xl mb-5 justify-center font-montserrat text-[#B00020] uppercase">Reporter un lieux
+                        non accessible !</h3>
+                    <p class="text-xl justify-center font-montserrat text-[#282828]">Vous pouvez signaler les lieux non
+                        accessibles rapidement
+                        et facilement !
+                    </p>
+                    <button type="button"
+                        class="mt-12 rounded signaleBtn text-[#FAFAFA] font-bold font-montserrat cursor-pointer text-xl p-4 bg-[#B00020]">SIGNALER
+                        !</button>
+                </div>
+            </div>
+
+            <div class="carteReport flex justify-center flex-col flex-wrap w-[100vw] mt-12">
+                <div
+                    class="card w-[80%] p-6 mb-5 pt-6 flex flex-col shadow bg-sky-400 shadow shadow-2xl rounded-xl mx-auto bg-white text-center">
+                    <h3 class="text-2xl mb-5 justify-center font-montserrat text-[#1B5E20] uppercase">
+                        Reporter un lieux
+                        accessible !</h3>
+                    <p class="text-xl justify-center font-montserrat text-[#282828]">Vous pouvez signaler les lieux
+                        <br>
+                        accessibles rapidement
+                        et facilement !
+                    </p>
+                    <button type="button"
+                        class="mt-12 rounded text-[#FAFAFA] font-montserrat font-bold signaleSucces cursor-pointer text-xl p-4 bg-[#1B5E20]">SIGNALER
+                        !</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <div class="footer mt-12 border border-t-3 border-stone-500">
+
+        <footer>
+
+            <div class="partner flex-rows justify-center flex mt-5">
+                <div class="texte degradeDoux rounded flex flex-row text-2xl">
+                    <h2 class="p-2 poppins font-medium">Nos réseaux</h2>
+                </div>
+            </div>
+
+
+            <!-- 🧨 Carousel 🧨 -->
+            <div class="overflow-hidden relative w-full">
+
+
+                <!-- 🥽 Carousel start div 🥽 -->
+                <div id="carousel" class="flex transition-transform duration-500">
+                    <!-- 🥽 Carousel start div 🥽 -->
+
+
+                    <!-- 🎍 Fin du carousel children 🎍 -->
+                </div>
+                <!-- 🎍 Fin du carousel children 🎍 -->
+
+            </div>
+            <!-- 🧨 Carousel 🧨 -->
+
+
+
+            <div
+                class="reseau flex flex-rows xs:ml-0 sm:ml-[120px] flex-wrap lg:ml-[120px] justify-center mt-5 mb-12 text-6xl rougepale gap-10">
+                <a aria-label="Chaine Youtube" href="../pages/dev.html" target="_blank"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a aria-label="Notre Instagram" href="../pages/dev.html" target="_blank"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a aria-label="Notre Facebook" href="../pages/dev.html" target="_blank"><i
+                        class="fa-brands fa-square-facebook"></i></a>
+
+                <div class="aboutText flex text-lg text-stone-900 flex-col">
+
+                    <a href="./pages/information.php" target="_blank">
+                        <h5>Information</h4>
+                    </a>
+
+                </div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+
+    <script>
+
+        // Menu burger
+
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function (e) {
+            mobileMenu.classList.toggle("hidden")
+        })
+
+
+    </script>
+
+
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
