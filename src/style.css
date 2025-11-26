@@ -1,3 +1,7 @@
+html {
+  width: 100vw;
+}
+
 /* Hover enter button */
 
 .buttonEnter {
@@ -43,6 +47,21 @@
 
 .transformIcon {
   transform: rotate(90deg);
+}
+
+.cardLieux {
+  transition: 0.4s ease-in-out;
+  perspective: 1000;
+}
+
+.cardLieux:hover {
+  transform: scale(1.01) rotateX(5deg) rotateY(5deg);
+}
+
+.blockDrag {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* .mobileUl {

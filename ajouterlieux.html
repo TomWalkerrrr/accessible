@@ -1,0 +1,353 @@
+<!--
+
+ <TomRegnier> ©Tom Regnier @2025 - 2026 </TomRegnier>
+   🧥 Merci de respecter l'intégrité de ce code. 🧥
+   
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Accessible est une plateforme collaborative qui permet aux personnes en situation de handicap d’évaluer l’accessibilité des lieux physiques et des sites internet, et de signaler les obstacles rencontrés afin de construire une société plus inclusive.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./src/output.css" rel="stylesheet">
+
+    <link href="./src/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="./assets/images/accesibleLogo.webp" type="image/x-icon">
+
+    <title>Accessible - Ajout d'un lieux / site</title>
+</head>
+
+<body class="bg-[#F6F6F6] p-0 m-0">
+
+    <div class="navbar z-[9999] fixed top-0 left-0 w-[100vw]">
+        <header>
+            <nav id="desktopNav" class="w-full bg-[#EDF2F7] pb-5 pt-3">
+                <div class="logo ml-2 flex items-center max-md:justify-center">
+                    <a href="index.html"><img class="w-12 h-auto" src="./assets/images/accesibleLogo.webp"
+                            alt="Illustration de quatre personnes en situation de handicap dans un cadre extérieur joyeux : une personne en fauteuil roulant manuel, une personne malvoyante guidée par une accompagnatrice, et un enfant en fauteuil roulant électrique. Le mot 'Accessible' est affiché en haut de l’image."></a>
+                    <a href="index.html">
+                        <h1 class="font-montserrat uppercase ml-2 text-3xl font-bold text-[#2866d5]">
+                            Accessible
+                        </h1>
+                    </a>
+                    <div class="flex flex-wrap items-center ml-5 justify-center py-5">
+
+                        <!-- Bouton burger -->
+                        <button id="menuBtn" class="md:hidden text-[#2866D5] cursor-pointer text-3xl focus:outline-none"
+                            aria-label="Ouvrir le menu">
+                            <i class="fa-solid fa-bars" id="clickIcon"></i>
+                        </button>
+
+                    </div>
+
+                    <!-- Ul des desktop -->
+
+                    <ul
+                        class="hidden md:flex flex-wrap gap-10 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg">
+                        <li><a href="index.php"
+                                class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a>
+                        </li>
+                        <li><a href="lieux.php">Lieux</a></li>
+                        <li><a href="about.php">Qui sommes-nous ?</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ul des mobile -->
+
+
+                <ul id="mobileMenu"
+                    class="hidden flex ml-24 flex-col gap-6 mt-4 px-6 text-[#1A1A1A] font-montserrat uppercase font-medium text-lg md:hidden">
+                    <li><a href="index.php"
+                            class="underline decoration-2 underline-offset-8 decoration-[#2866d5]">Accueil</a></li>
+                    <li><a href="lieux.php">Lieux</a></li>
+                    <li><a href="about.php">Qui sommes-nous ?</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    </div>
+
+
+    <main>
+
+        <div class="solutionPart flex flex-col w-[100vw] mt-24 flex mx-auto">
+
+            <h2
+                class="text-4xl font-montserrat flex text-shadow text-shadow-lg mx-auto text-[#2866d5] font-bold uppercase">
+                Ajouter un lieux / site</h2>
+
+        </div>
+
+        <div
+            class="flex flex-wrap mx-auto justify-center ml-12 mr-12 bg-stone-50 shadow shadow-[0px_0px_30px_#C2C2C2] mt-12 rounded-sm max-sm:ml-0 max-sm:p-0 max-sm:mr-0">
+
+            <div class="carteReport flex justify-center flex-col flex-wrap w-[100vw] mt-12">
+                <div
+                    class="card w-[80%] max-sm:w-[90vw] max-sm:border max-sm:border-blue-500 p-6 mb-3 pt-6 flex flex-col bg-sky-400 shadow shadow-[0px_0px_30px_#C2C2C2] rounded-xl mx-auto bg-white text-center">
+                    <h3 class="text-2xl mb-5 justify-center font-montserrat text-[#282828] uppercase">Merci de déclarer
+                        des informations réelles et vérifiées.</h3>
+
+
+
+                    <h2
+                        class="text-2xl font-montserrat flex text-shadow mb-5 text-shadow-lg mx-auto text-[#2866d5] font-bold uppercase">
+                        Qui êtes vous ?</h2>
+
+
+                    <div class="information mb-12 mt-5 flex mx-auto">
+
+
+                        <form action="POST" class="grid grid-cols-2 max-lg:grid-cols-1 gap-24">
+
+                            <input type="text" name="nom" placeholder="Votre nom" aria-label="Votre nom"
+                                class="p-3 font-montserrat w-[100%] border-2 shadow shadow-2xl border-blue-500 rounded text-center text-xl"
+                                maxlength="20">
+
+                            <input type="email" name="email" placeholder="Votre email" aria-label="Votre email"
+                                class="p-3 font-montserrat w-[100%] border-2 shadow shadow-2xl border-blue-500 rounded text-center text-xl"
+                                maxlength="50">
+
+
+                        </form>
+
+
+                    </div>
+
+                    <h2
+                        class="text-2xl font-montserrat flex text-shadow mb-5 text-shadow-lg mx-auto text-[#2866d5] font-bold uppercase">
+                        Lieux</h2>
+
+                    <div class="lieux mb-12">
+                        <p class="font-montserrat text-lg">Si le lieu est un lieu physique et non un site internet, ne
+                            cochez pas la case « site
+                            internet ».</p>
+
+                        <p class="text-xl font-montserrat mt-5">Site <span class="">Internet ?</span>
+                            : <input type="checkbox" name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+
+
+                        </p>
+
+                        <div class="informationLieux mb-12 mt-5 flex justify-center">
+
+                            <form action="POST" class="grid grid-cols-2 max-lg:grid-cols-1 gap-24">
+
+                                <input type="text" name="name_lieux" placeholder="Nom du lieux / site"
+                                    aria-label="Votre nom"
+                                    class="p-3 font-montserrat w-[100%] border-2 shadow shadow-2xl border-blue-500 rounded text-center text-xl"
+                                    maxlength="40">
+
+                                <input type="text" name="localisation_lieux" placeholder="Adresse du lieux / site"
+                                    aria-label="Votre nom"
+                                    class="p-3 font-montserrat w-[100%] border-2 shadow shadow-2xl border-blue-500 rounded text-center text-xl"
+                                    maxlength="40">
+
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <h2
+                        class="text-2xl font-montserrat flex text-shadow mb-5 text-shadow-lg mx-auto text-[#2866d5] font-bold uppercase">
+                        Sélectionnez les catégories de handicap concernées.</h2>
+
+                    <div class="selectionType grid grid-cols-2 max-lg:grid-cols-1">
+
+                        <p class="text-xl font-montserrat mt-5">Handicap <span class="text-blue-500">Physique</span>
+                            : <input type="checkbox" name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        </p>
+                        <p class="text-xl font-montserrat mt-5">Handicap <span class="">Visuelle</span>
+                            : <input type="checkbox" name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        </p>
+                        <p class="text-xl font-montserrat mt-5">Handicap <span class="text-green-700">Auditive</span>
+                            : <input type="checkbox" name="pmrAcces" class="h-6 ml-5 w-6 accent-[#bf360c] rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        </p>
+                    </div>
+
+
+
+                    <!-- Note auteur -->
+
+                    <div class="notes">
+
+                        <h4
+                            class="text-xl mb-5 mt-12 underline underline-offset-8 decoration-wavy justify-center font-montserrat text-[#282828]">
+                            Votre note</h4>
+                        <p class="text-md text-[#1B5E20] font-montserrat">« Cochez uniquement les éléments que vous
+                            approuvez (par
+                            exemple, si le lieu est accessible
+                            aux PMR, cochez “Accessibilité PMR”).</p>
+
+                        <div class="notationsPrincipal grid grid-cols-2 max-lg:grid-cols-1">
+
+                            <p class="text-xl font-montserrat mt-5">Accessibilité <span class="text-blue-500">PMR</span>
+                                : <input type="checkbox" name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            </p>
+
+                            <!-- Accessibilité visuelle -->
+                            <p class="text-xl font-montserrat mt-5">Accessibilité <span
+                                    class="uppercase">Visuelle</span> :
+                                <input type="checkbox" name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            </p>
+
+                            <!-- Accessibilité psychique -->
+                            <p class="text-xl font-montserrat mt-5">Accessibilité <span
+                                    class="text-[#1B5E20] uppercase">Psychique</span> : <input type="checkbox"
+                                    name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            </p>
+
+                            <!-- Accessibilité auditif -->
+                            <p class="text-xl font-montserrat mt-5">Accessibilité <span
+                                    class="text-[#bf360c] uppercase">Auditive</span> : <input type="checkbox"
+                                    name="pmrAcces" class="h-6 ml-5 w-6 accent-[#bf360c] rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            </p>
+
+
+                            <!-- Qualité de l’accueil et bienveillance du personnel -->
+                            <p class="text-xl font-montserrat mt-5">Bienveillance de l’accueil : <input type="checkbox"
+                                    name="pmrAcces" class="h-6 ml-5 w-6 accent-blue-600 rounded border-gray-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            </p>
+
+                        </div>
+
+                        <!-- Notation de Accessible -->
+
+                        <div class="accessibleNote mt-12">
+
+                            <h5
+                                class="text-xl font-montserrat underline text-[#282828] decoration-1 underline-offset-8 decoration-wavy decoration-blue-500">
+                                Notation de
+                                <span
+                                    class="uppercase font-bold font-montserrat text-blue-500 text-2xl">Accesssible</span>
+                            </h5>
+
+                            <div class="noteAdmin flex flex-col mx-auto">
+
+                                <p class="text-xl font-montserrat mt-5 flex mx-auto text-[#bf360c] uppercase">
+                                    Important
+                                </p>
+                                <p class="text-xl font-montserrat mt-5 flex mx-auto">Les informations pourront être
+                                    susceptibles d’être validées par nos services. Nous classerons l’établissement
+                                    “Certifié Accessible” si toutes les informations sont correctes et que
+                                    l’établissement répond aux critères.</p>
+
+                            </div>
+
+                            <img src="./assets/images/mondemeilleurs.webp" alt="Image de certification accessible"
+                                class="flex mx-auto w-32 mt-5">
+
+                        </div>
+
+                        <input type="submit" name="submitFinal" value="Confirmer et envoyer"
+                            class="mt-12 rounded max-sm:w-[100%] bg-[#1B5E20] transition duration-500 ease hover:scale-105 w-96 mx-auto text-[#FAFAFA] font-bold font-montserrat cursor-pointer text-xl p-4"></input>
+                    </div>
+
+
+                    <!-- Notation -->
+                    <!-- Note auteur -->
+
+
+
+
+                </div>
+
+
+    </main>
+
+    <div class="footer mt-12 border border-t-3 border-stone-500">
+
+        <footer>
+
+            <div class="partner flex-rows justify-center flex mt-5">
+                <div class="texte degradeDoux rounded flex flex-row text-2xl">
+                    <h2 class="p-2 poppins font-medium">Nos réseaux</h2>
+                </div>
+            </div>
+
+
+            <!-- 🧨 Carousel 🧨 -->
+            <div class="overflow-hidden relative w-full">
+
+
+                <!-- 🥽 Carousel start div 🥽 -->
+                <div id="carousel" class="flex transition-transform duration-500">
+                    <!-- 🥽 Carousel start div 🥽 -->
+
+
+                    <!-- 🎍 Fin du carousel children 🎍 -->
+                </div>
+                <!-- 🎍 Fin du carousel children 🎍 -->
+
+            </div>
+            <!-- 🧨 Carousel 🧨 -->
+
+
+
+            <div
+                class="reseau flex flex-rows xs:ml-0 sm:ml-[120px] flex-wrap lg:ml-[120px] justify-center mt-5 mb-12 text-6xl rougepale gap-10">
+                <a aria-label="Chaine Youtube" href="../pages/dev.html" target="_blank"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a aria-label="Notre Instagram" href="../pages/dev.html" target="_blank"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a aria-label="Notre Facebook" href="../pages/dev.html" target="_blank"><i
+                        class="fa-brands fa-square-facebook"></i></a>
+
+                <div class="aboutText flex text-lg text-stone-900 flex-col">
+
+                    <a href="./pages/information.php" target="_blank">
+                        <h5>Information</h4>
+                    </a>
+
+                </div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+
+    <script>
+
+        // Menu burger
+
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const clickIcon = document.getElementById("clickIcon");
+
+        menuBtn.addEventListener("click", function (e) {
+            mobileMenu.classList.toggle("hidden");
+            // mobileMenu.classList.toggle("active");
+            clickIcon.classList.toggle("transformIcon");
+        })
+
+
+    </script>
+
+
+
+    <!-- <div id="app"></div>
+    <script type="module" src="/src/main.js"></script> -->
+</body>
+
+</html>
